@@ -1,2 +1,23 @@
 # JARVIS
-Um chatbot simples desenvolvido em JavaScript com foco em testar lógica, manipulação de strings e interações básicas com o usuário.  Projeto criado apenas para fins de estudo e prática no Visual Studio Code.
+Chatbot simples desenvolvido em JavaScript com foco em prática de lógica, interpretação de comandos e interação básica com o usuário.
+Comand list:
+- "Qual a capital de" ( se ele não souber ele vai perguntar para salvar a informação)
+
+- Qualquer tipo de conta
+
+- me conte uma piada
+
+- curiosidade
+
+- banana (ele vai pedir para classificar a informação)
+
+- me anime
+
+- me motive
+
+- oi
+
+- tudo bem ?
+
+- data comemorativa
+Projeto criado para testar conhecimentos em JavaScript no Visual Studio Code, com possibilidade de evolução futura.
