@@ -1,4 +1,4 @@
-console.log("🔥 SERVIDOR JARVIS NOVO 🔥");
+console.log(" SERVIDOR JARVIS NOVO ");
 
 const express = require("express");
 const mysql = require("mysql2");
