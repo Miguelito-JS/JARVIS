@@ -457,7 +457,7 @@ function handleAprender(palavra, tipo) {
 
     let answer = "";
 
-    // 👋 Saudações
+    //  Saudações
     const saudacoes = ["oi", "olá", "bom dia", "boa tarde", "boa noite", "e aí", "salve"];
     if (saudacoes.includes(cleanedQuestion)) {
       answer = "Olá! Em que posso te ajudar hoje?";
@@ -466,7 +466,7 @@ function handleAprender(palavra, tipo) {
       return;
     }
 
-    // 🔹 Modo aprendizado: se está aguardando ensinar algo
+    //  Modo aprendizado: se está aguardando ensinar algo
     if (learningMode) {
       const palavra = learningMode; // palavra que Jarvis quer aprender
       const categoria = cleanedQuestion; // resposta do usuário
@@ -495,7 +495,7 @@ function handleAprender(palavra, tipo) {
       return;
     }
 
-    // 🔹 Responde frutas ou animais já conhecidos
+    //  Responde frutas ou animais já conhecidos
     const frutaOuAnimal = verificarFrutasEAnimais(cleanedQuestion, frutasAnimais);
     if (frutaOuAnimal) {
       answer = frutaOuAnimal;
@@ -504,7 +504,7 @@ function handleAprender(palavra, tipo) {
       return;
     }
 
-    // 🔹 Pergunta sobre capitais
+    //  Pergunta sobre capitais
     if (cleanedQuestion.startsWith("qual a capital de ")) {
       const pais = cleanedQuestion.replace("qual a capital de ", "").trim();
       if (capitais[pais]) {
@@ -518,7 +518,7 @@ function handleAprender(palavra, tipo) {
       return;
     }
 
-    // 🔹 Cálculo matemático
+    //  Cálculo matemático
     if (/^[0-9+\-*/().\s]+$/.test(cleanedQuestion)) {
       try {
         const result = eval(cleanedQuestion);
@@ -531,7 +531,7 @@ function handleAprender(palavra, tipo) {
       return;
     }
 
-    // 🔹 Datas comemorativas
+    //  Datas comemorativas
     if (
       cleanedQuestion.includes("data comemorativa") ||
       cleanedQuestion.includes("tem alguma data hoje") ||
@@ -543,7 +543,7 @@ function handleAprender(palavra, tipo) {
       return;
     }
 
-    // 🔹 Curiosidades
+    //  Curiosidades
     if (
       cleanedQuestion.includes("curiosidade") ||
       cleanedQuestion.includes("fato curioso") ||
@@ -555,7 +555,7 @@ function handleAprender(palavra, tipo) {
       return;
     }
 
-    // 🔹 Resposta humanizada ou fallback
+    //  Resposta humanizada ou fallback
     const respostaHumanizada = respostasHumanizadas(cleanedQuestion);
     if (respostaHumanizada) {
       answer = respostaHumanizada;
