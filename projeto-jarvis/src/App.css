@@ -1,0 +1,148 @@
+/* Fundo preto e fonte futurista */
+body, #root {
+  background-color: #000;
+  color: #0ff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Container principal */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 420px;
+}
+
+/* Círculo neon giratório */
+.neon-circle {
+  border: 5px solid #ff2ecc; /* rosa choque */
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  box-shadow:
+    0 0 15px #ff2ecc,
+    0 0 30px #ff2ecc,
+    0 0 50px #330066,
+    0 0 80px #33ffff; /* luz azul */
+  margin-bottom: 30px;
+  animation: spin 5s linear infinite;
+}
+
+/* Animação de giro */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Caixa de histórico de conversa */
+.chat-history {
+  background-color: #111;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  height: 300px;
+  overflow-y: auto;
+  box-shadow:
+    0 0 15px #33ffff,
+    inset 0 0 10px #0ff;
+  color: #0ff;
+  font-size: 14px;
+}
+
+/* Mensagens no chat */
+.chat-message {
+  margin-bottom: 12px;
+}
+
+.chat-message .user-label {
+  font-weight: bold;
+  color: #ff2ecc; /* rosa choque pro usuário */
+  margin-bottom: 4px;
+}
+
+.chat-message .jarvis-label {
+  font-weight: bold;
+  color: #33ffff; /* azul neon Jarvis */
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+/* Placeholder do histórico (quando vazio) */
+.chat-placeholder {
+  color: #555;
+  font-style: italic;
+  text-align: center;
+  margin-top: 120px;
+}
+
+/* Form de input */
+form.chat-input-form {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Input texto */
+input.chat-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  outline: none;
+  background-color: #222;
+  color: #0ff;
+  box-shadow: inset 0 0 5px #0ff;
+  transition: box-shadow 0.3s ease;
+}
+
+input.chat-input:focus {
+  box-shadow:
+    0 0 8px #33ffff,
+    inset 0 0 10px #0ff;
+}
+
+/* Botão enviar */
+button.chat-submit {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #ff2ecc;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  box-shadow:
+    0 0 10px #ff2ecc,
+    0 0 15px #ff2ecc;
+  transition: background-color 0.3s ease;
+}
+
+button.chat-submit:hover {
+  background-color: #ff69b4;
+}
+
+/* Scroll customizado */
+.chat-history::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-history::-webkit-scrollbar-track {
+  background: #111;
+  border-radius: 10px;
+}
+
+.chat-history::-webkit-scrollbar-thumb {
+  background: #33ffff;
+  border-radius: 10px;
+}
+
+.chat-history::-webkit-scrollbar-thumb:hover {
+  background: #0ff;
+}
